@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>go-notes</title>
+		<script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<h1>{{ .Title }}</h1>
+
+		<div id="content">
+			{{ if eq .Content "addNoteForm" }}
+				<h1>showing add note form </h1>
+				{{ template "addNoteForm" . }}
+			{{ else if eq .Content "signupForm" }}
+				<h1>showing signup form </h1>
+				{{ template "signupForm" . }}
+			{{ end }}
+		</div>
+
+		<ul id="res">
+
+		</ul>
+	</body>
+</html>
+

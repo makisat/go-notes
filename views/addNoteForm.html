@@ -1,0 +1,8 @@
+{{ define "addNoteForm" }}
+<form hx-post="/addNote" hx-swap="afterend">
+	<label for="content" />
+	<input type="text" name="content" />
+
+	<input type="submit" value="submit">
+</form>
+{{ end }}

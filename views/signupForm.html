@@ -1,0 +1,11 @@
+{{ define "signupForm" }}
+<form hx-post="/addUser" hx-swap="afterend">
+	<label for="username" />
+	<input type="text" name="username" />
+
+	<label for="password" />
+	<input type="text" name="password" />
+
+	<input type="submit" value="signup" />
+</form>
+{{ end }}
